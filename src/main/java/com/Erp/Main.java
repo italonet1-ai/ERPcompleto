@@ -5,8 +5,10 @@ package com.Erp;
 public class Main {
     public static void main(String[] args) {
 
-        GerenciadoFuncionario gerenciador = new GerenciadoFuncionario();
-        gerenciador.iniciarMenu();
+     //   GerenciadoFuncionario menuFuncionario = new GerenciadoFuncionario();
+        GerenciadorProdutos menuProduto = new GerenciadorProdutos();
+       // menuFuncionario.iniciarMenu();
+        menuProduto.iniciarMenu();
 
 
     }
