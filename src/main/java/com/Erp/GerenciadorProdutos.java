@@ -43,16 +43,15 @@ public class GerenciadorProdutos {
 
     }
 
-    private void cadastrar(){
+    private void cadastrar() {
 
-        System.out.println("Digite o codigo do produto:");
-        int codigo = scanner.nextInt();
-        scanner.nextLine();
-        while (codigo<0){
-            System.out.println("Codigo menor que zero não é possivel, digite novamente:");
-            codigo = scanner.nextInt();
-            scanner.nextLine();
-        }
+
+
+         System.out.println("Digite o codigo do produto:");
+            Util modificar = new Util();
+
+            int codigo = modificar.modificador(scanner);
+
         System.out.println("Digite o nome do fornecedor que entrega o produto: ");
         String fornecedor = scanner.nextLine();
         while (fornecedor.trim().isEmpty()){
@@ -72,17 +71,12 @@ public class GerenciadorProdutos {
             unidadeMedida = scanner.nextLine();
         }
         System.out.println("Digite o valor do produto:");
-        Double valor = scanner.nextDouble();
-        scanner.nextLine();
-        while (valor <0  ){
-            System.out.println("Preço menor que 0, gentileza digitar novamente");
-            valor = scanner.nextDouble();
-            scanner.nextLine();
-        }
+        double preco = modificar.modificadorPreco(scanner);
+
         System.out.println("Deseja confirmar o cadastro do novo produto:");
         String confimacao = scanner.nextLine();
         if (confimacao.equalsIgnoreCase("Sim")) {
-            Produtos novoProduto = new Produtos(codigo, fornecedor, descricao, unidadeMedida, valor);
+            Produtos novoProduto = new Produtos(codigo, fornecedor, descricao, unidadeMedida, preco);
             gerenciadorProdutos.add(novoProduto);
             System.out.println("Produto cadastrado com sucesso.");
 
