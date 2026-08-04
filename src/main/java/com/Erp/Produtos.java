@@ -3,51 +3,58 @@ package com.Erp;
 public class Produtos {
 
     private int codigo;
-    private String nomeFornecedor;
+    private Fornecedor fornecedor;
     private String descricaoProduto;
     private String unidadeMedida;
     private Double preco;
 
-   public Produtos(int codigo,String nomeFornecedor,String descricaoProduto,String unidadeMedida,Double preco ){
+
+   public Produtos(int codigo,String descricaoProduto,String unidadeMedida,Double preco,Fornecedor fornecedor ){
        this.codigo = codigo;
-       this.nomeFornecedor = nomeFornecedor;
+       this.fornecedor = fornecedor;
        this. descricaoProduto =  descricaoProduto;
        this.unidadeMedida = unidadeMedida;
        this.preco = preco;
+
    }
-    public int getCodigo(){
 
-       return codigo;
-    }
-    public String getNomeFornecedor(){
-
-       return nomeFornecedor;
-    }
-    public String getDescricaoProduto(){
-       return  descricaoProduto;
-    }
-    public String getUnidadeMedida(){
-
-       return unidadeMedida;
-    }
-    public Double getPreco(){
-
-       return preco;
+    public int getCodigo() {
+        return codigo;
     }
 
-    public void setNomeFornecedor(String novoNomeFornecedor) {
-        this.nomeFornecedor = novoNomeFornecedor;
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
 
-    public void setDescricaoProduto(String novaDescricaoProduto) {
-        this.descricaoProduto = novaDescricaoProduto;
+    public Fornecedor getFornecedor() {
+        return fornecedor;
     }
 
-    public void setPreco(Double novoPreco) {
-        this.preco = novoPreco;
+    public void setFornecedor(Fornecedor fornecedor) {
+        this.fornecedor = fornecedor;
     }
 
-    public void setUnidadeMedida(String novauUidadeMedida) {
-        this.unidadeMedida = novauUidadeMedida;
+    public String getDescricaoProduto() {
+        return descricaoProduto;
+    }
+
+    public void setDescricaoProduto(String descricaoProduto) {
+        this.descricaoProduto = descricaoProduto;
+    }
+
+    public String getUnidadeMedida() {
+        return unidadeMedida;
+    }
+
+    public void setUnidadeMedida(String unidadeMedida) {
+        this.unidadeMedida = unidadeMedida;
+    }
+
+    public Double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(Double preco) {
+        this.preco = preco;
     }
 }
